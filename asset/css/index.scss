@@ -3,24 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
     width: 100%wh;
     height: 75px;
-    background-color: rgba(61, 54, 54, 0.341);
-  
     position: relative;
 }
+
 .nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     &-brand {
+
         &__logo {
             width: 90px;
             height: 50px;
             margin-top: 15px;
         }
     }
+
     &-list {
         margin-top: 12px;
         list-style: none;
@@ -28,14 +31,17 @@
         display: flex;
         justify-content: space-between;
         color: black;
+
         a {
             color: black;
             text-decoration: none;
         }
+
         &__item {
             display: inline-block;
             position: relative;
-            ::before {
+
+            &::before {
                 position: absolute;
                 z-index: 2;
                 content: " ";
@@ -47,7 +53,8 @@
                 bottom: -25px;
                
             }
-            :hover::before{
+
+            &:hover::before{
                 background-color: black;
                 height: 2.5px;
                 width: 100%;
@@ -57,6 +64,7 @@
             }
         }  
     }
+
     &-auth {
         display: inline-block;
         flex-direction: row;
@@ -72,12 +80,14 @@
             border: 1px solid rgb(253, 89, 6);
             background-color: white;
             color:  rgb(253, 89, 6) ;
+
             &:hover {
                 background-color: rgb(253, 89, 6);
             border: 1px solid rgb(253, 89, 6);
             color: white; 
             }
         }
+
         &__signup{
             margin: 0;
             display: inline-block;
@@ -86,6 +96,7 @@
             background-color: rgb(253, 89, 6);
             border: 1px solid rgb(253, 89, 6);
             color: white;
+
             &:hover {
                 background-color: white;
             color:  rgb(253, 89, 6) ;
@@ -94,44 +105,58 @@
 
     }
 }
+
 .main {
     margin-top: 60px;
 }
-hr {
-    height: 1px;
-    background-color: black;
-    width: 100px;
-   
-}
+
 .intro {
     
     display: inline-block;
-    &-smalltext {
+    position: relative;
+
+    &-small-text {
         color: rgb(0, 0, 0);
         font-weight: 500;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            margin-left: 50px;
+            margin-top: 15px;
+        }
     }
-    &-smalltexts {
+
+    &-small-texts {
         color: rgb(0, 0, 0);
       
     }
-    &-bigtext {
+
+    &-big-text {
         font-size: 50px;
         margin-left: 0px ;
         color: rgb(12, 98, 183);
-        &__redtext {
+
+        &__red-text {
             color: red;
         }
     }
 }
+
 .house {
     text-align: right;
     position: relative;
     top: 30px;
+
     &-img {
         width: 1050px;
         height: 500px;
         box-shadow: 3px 5px rgba(0, 0, 0, 0.09);
     }
+
     &-box {
         position: absolute;
         width: 150%;
@@ -139,6 +164,7 @@ hr {
         background-color: rgba(20, 20, 84, 0.989);
         z-index: 2;
         margin-top: -450px;
+
         &__tittle {
             position: absolute;
             color: white;
@@ -146,67 +172,103 @@ hr {
             font-size: 30px;
             text-align: center !important;
             margin-left: 70px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
+
         &__button {
             position: absolute;
-            top: 60px;
-            float: left;
+            top: 20px;
+            float: center;
             // text-align: center;
-            display: flex;
-            flex-direction: column;
-            margin: auto 70px auto ;
+            // display: flex;
+           padding-top: 60px;
+           
             width: 280px;
-            &__find {
-                background-color:rgb(253, 89, 6) ; 
-                margin-top: 30px;
+
+            &-find {
+                background-color:rgb(3, 82, 177) ; 
+                // margin-top: 20px;
                 border: none;
                 color: white;
                 font-weight: 100;
-                font-size: 20px;
+                font-size: 15px;
+                margin-left: 70px;
+                margin-top: 5px;
+                text-align: left;
+                width: 280px;
+                height: 60px;
+            }
+
+            &__findspace {
+                width: 280px;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 70px;
+                background-color: rgb(234, 67, 6);
+                color: white;
+                border: inherit;
             }
         }
     }
 }
+
+#exampleFormControlSelect1 {
+    font-size: 12px;
+    background-color:rgb(3, 82, 177) ; 
+    color: white;
+    border: inherit;
+    height: 35px;
+}
+
 .Ourspaces {
     margin-top: 120px;
     display: inline-block;
     width: 96%;
     justify-content: baseline;
+
     &-text {
         width: 86%;
-        &__bigtext {
+
+        &__big-text {
             font-size: 40px;
             color: rgb(12, 98, 183);
             font-weight: 500;
             
         }
-        &__smalltext {
+
+        &__small-text {
             color: rgb(113, 111, 111);
             font-weight: 300;
         }
     }
+
     &-arrow {
+        box-sizing: border-box;
         width: 50px;
-       font-weight: bold;
-      
+        height:100px;
+       font-weight: bolder;
+    //    transform: rotate(180deg); 
     }
+
     &-arrows {
         width: 70px;
        font-weight: bold;
-       
         margin-left: 20px;
     }
+
     &-slide {
         
         &__card {
+
             &__img{
                 height: 492.138px;
                 background-color: red;
             }
         }
+
         &__card1 {
             position: relative;
+
             &__button {
                 position: absolute;
                 z-index: 2;
@@ -222,6 +284,7 @@ hr {
 
         &__card3 {
             position: relative;
+
             &__button {
                 position: absolute;
                 z-index: 2;
@@ -234,28 +297,31 @@ hr {
                 padding-left: 25px;
             }
         }
+
         &__card2 {
             background-color: rgb(39, 39, 134);
             width: 100%;
             height: 100%;
             position: relative;
                
-            &__bigtext {
+            &__big-text {
                 color: white;
                 font-size: 40px;
                 text-align: center;
                 padding-top: 70%;
             }
-            &__smalltext {
+
+            &__small-text {
                 color: white;
                 font-size: 20px;
                 text-align: center;
                 padding: 30px ;
             }
+
             &__button {
                 position: absolute;
                 z-index: 2;
-                width: 230px;
+                width: 250px;
                 height: 80px;
                 background-color: rgb(255, 105, 24);
                 bottom: 0px;
@@ -272,24 +338,477 @@ hr {
 // frispes
 .frispes {
     margin-top: 100px;
+
     &-item {
         width: 200px;
         height: 200px;
+
+        &__icon {
+           font-size: 40px;
+        
+        }
         &__text {
-            &__bigtext {
+
+            &__big-text {
                 color: rgb(6, 6, 121);
                 font-size: 30px;
                 font-weight: 500;
             }
         }
     }
+
     &-box {
-        background-color: rgb(6, 6, 121); 
+        background-color: rgb(47, 47, 116); 
         color: white;
         width: 100%;
         height: 85%;
+        display: inline-block;
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-top: 70px;
+
+        &__small-text {
+            font-size: 20px;
+            // margin-left: 50px;
+            // margin-top: 70px;
+
+            &__hr {
+                background-color: white;
+            }
+        }
+
+        &__big-text {
+            // margin-left: 50px;
+            font-size: 40px;
+            font-weight: 500;
+        }
         
     }
+}
+// facilities
+.facilities {
+    display: inline-block;
+
+    &-small-text {
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            margin-left: 110px;
+            margin-top: -20px;
+        }
+    }
+
+    &-small-texts {
+        color: rgb(0, 0, 0);
+      
+    }
+
+    &-big-text {
+        font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+    }
+
+    &-space {
+        background-color: white;
+        
+        &__place {
+            padding-left: 40px;
+            padding-top: 50px;
+            font-size: 20px;
+            
+            &__item {
+                height: 50px;
+                padding-left: 10px;
+           
+            }
+
+            &__coffee {
+                height: 50px;
+                background-color:rgb(255, 105, 24) ;
+                padding-left: 10px;
+                width: 240px;
+                color: white;
+                box-shadow: 3px 5px #3c5c7a1d;
+            }
+        }
+
+       &-img {
+      display: flex;
+       height: 500px;
+        right: 0;
+       }
+    }
+}
+
+// gallery
+.gallery {
+    margin-top: 100px;
+
+    &-small-text {
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            margin-left: 150px;
+            margin-top: -22px;
+        }
+    } 
+
+    &-big-text {
+        font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+        margin-right: 300px;
+        margin-bottom: 40px;
+    }
+
+    &-big-img {
+        
+        &__space {
+            margin-top: 332px;
+            margin-left: -15px;
+            width: 100%;
+            height: 400px;
+        
+        }
+
+        &__study {
+            // margin-top: 250px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-img {
+        margin-top: 46px;
+
+        &__item2 {
+          width: 100%;
+          height: 400px;
+        }
+
+        &__item1 {
+            width: 100%;
+            height: 400px;
+          }
+    }
+}
+
+// who 
+.who {
+    margin-top: 70px;
+    text-align: center;
+
+    &-big-text {
+        font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+      
+    }
+
+    &-small-text {
+        font-size: 20px;
+    }
+
+    &-brand {
+       margin-top: 40px;
+
+        &-item {
+            height: 100%;
+            width: 100%;
+
+        } 
+    }
+}
+
+// customer
+.customer {
+    margin-top: 70px;
+
+    &-text {
+
+        &__small-text {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+
+            &::after {
+                content: " ";
+                width: 100px;
+                height: 2px;
+                background-color: black;
+                position: absolute;
+                margin-left: 100px;
+                margin-top: -22px;
+            }
+        }
+
+        &__big-text {
+            font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+        margin-right: 300px;
+        }
+    }
+
+    &-arrow {
+       margin-left: 1100px;
+
+       &__arrow-end {
+        margin-left: 20px;
+        width: 80px;
+       }
+    }
+    &-card {
+        width: 450px;
+        height: 400px;
+        margin-top: 70px;
+        background-color:  rgb(12, 98, 183);
+        color: white;
+        padding: 40px;
+        
+        &__body {
+            padding-bottom: 70px;
+            height: 300px;
+        }
+
+        &__tittle {
+            display: inline-block;
+            margin-bottom: 30px;
+
+            &__img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            &__name {
+
+               padding-top: 10px; 
+               font-weight: 500;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+// answers 
+.answers {
+    margin-top: 70px;
+
+    &-big-text {
+        font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+        width: 50%;
+        text-align: center;
+        margin-left: 25%;
+    }
+
+    &-box {
+        margin-top: 50px;
+        width: 90%;
+        height: 150px;
+        padding-top: 25px;
+      
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.838);
+
+        &-how {
+            height: 90px;
+        }
+
+        &-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 105, 24);
+            margin-left: 42%;
+            margin-bottom: 10px
+        }
+
+        &-icon2 {
+           color: rgb(255, 105, 24);
+            background-color: white;
+            box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.838);
+        }
+    }
+
+    &-box2 {
+        background-color: rgb(255, 105, 24);
+        color: white;
+        box-shadow: none;
+    }
+
+    &-small-text {
+        text-align: center;
+        margin-top: 60px;
+        color: rgb(255, 105, 24);
+        // display: inline-block;
+    }
+
+}
+
+// news
+.news {
+    margin-top: 70px;
+    background-color: rgba(61, 60, 60, 0.319);
+    width: 100vw;
+
+    &-big-text {
+            font-size: 40px;
+        font-weight: 500;
+        color: rgb(12, 98, 183);
+        margin-right: 300px;
+        }
+
+    &-small-text {
+            text-align: center;
+            color: rgb(255, 105, 24);
+            display: inline-block;
+        }
+
+    &-event {
+        margin-top: 70px;
+        background-color: white;
+        width: 350px;
+        height: 350px;
+        position: relative;
+        padding: 20px;
+
+        &__img {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            z-index: 2;
+            margin-top: -92.2%;
+        }
+
+        &__profile {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            
+        }
+
+        &__bigtittle {
+            font-size: 40px;
+            font-weight: 500;
+            color: rgb(51, 51, 51);
+            margin-bottom: 20px;
+        }
+
+        &__name {
+            margin-top: 20px;
+        }
+
+        &__job {
+            color: rgba(95, 94, 94, 0.647);
+        }
+
+        &-text {
+            color: rgba(95, 94, 94, 0.647);
+        }
+
+        &-card-tittle {
+            font-size: 20px;
+            width: 100%;
+        }
+    }
+}
+// member
+.member {
+    background-color: #3C5C7A;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding-top: 70px;
+    margin-top: 70px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &__small-texts {
+       font-size: 20px;
+       margin-right: 300px;
+
+       &::after {
+        content: " ";
+        width: 100px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        margin-left: 190px;
+        margin-top: -25px;
+    }
+    }
+    &__small-text {
+        font-size: 20px;
+       margin-right: 300px;
+    }
+
+    &__big-text {
+        font-size: 40px;
+    font-weight: 500;
+    
+    margin-right: 300px;
+    }
+
+    &-button {
+        margin-top: 40px;
+        background-color: rgb(255, 105, 24) ;
+        width: 45%;
+        height: 40px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    &-image {
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+    }
+}
+
+// footer 
+.footer {
+    padding-top: 70px;
+    background-color: #1e3c58;
+    color: white;
+    padding-bottom: 70px;
+    width: 100%;
+    display: flex;
+   
+    &-brand {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    &-text {
+        font-size: 15px;
+
+        &__brand {
+            width: 220px;
+        }
+    }
+
+    &-tittle {
+        font-weight: bold;
+        color: rgb(200, 200, 200);
+    }
+   
 }
 
 
