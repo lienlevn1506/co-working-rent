@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .header {
   width: 100% wh;
@@ -86,6 +89,7 @@
 .nav-auth__signup:hover {
   background-color: white;
   color: rgb(253, 89, 6);
+  border: 1px solid rgb(253, 89, 6);
 }
 
 .main {
@@ -116,9 +120,11 @@
   font-size: 50px;
   margin-left: 0px;
   color: rgb(12, 98, 183);
+  font-family: "Lora", serif;
 }
 .intro-big-text__red-text {
   color: red;
+  font-family: "Lora", serif;
 }
 
 .house {
@@ -198,6 +204,7 @@
   font-size: 40px;
   color: rgb(12, 98, 183);
   font-weight: 500;
+  font-family: "Lora", serif;
 }
 .Ourspaces-text__small-text {
   color: rgb(113, 111, 111);
@@ -257,6 +264,7 @@
   font-size: 40px;
   text-align: center;
   padding-top: 70%;
+  font-family: "Lora", serif;
 }
 .Ourspaces-slide__card2__small-text {
   color: white;
@@ -276,6 +284,9 @@
   padding-left: 20px;
   display: inline-block;
 }
+.Ourspaces-slide__card2__button__icon {
+  margin-left: 50px;
+}
 
 .frispes {
   margin-top: 100px;
@@ -291,6 +302,7 @@
   color: rgb(6, 6, 121);
   font-size: 30px;
   font-weight: 500;
+  font-family: "Lora", serif;
 }
 .frispes-box {
   background-color: rgb(47, 47, 116);
@@ -305,12 +317,22 @@
 .frispes-box__small-text {
   font-size: 20px;
 }
-.frispes-box__small-text__hr {
+.frispes-box__small-text-line {
+  position: relative;
+}
+.frispes-box__small-text-line::after {
+  content: " ";
+  width: 100px;
+  height: 2px;
   background-color: white;
+  position: absolute;
+  margin-left: 190px;
+  margin-top: -25px;
 }
 .frispes-box__big-text {
   font-size: 40px;
   font-weight: 500;
+  font-family: "Lora", serif;
 }
 
 .facilities {
@@ -336,6 +358,7 @@
   font-size: 40px;
   font-weight: 500;
   color: rgb(12, 98, 183);
+  font-family: "Lora", serif;
 }
 .facilities-space {
   background-color: white;
@@ -385,6 +408,7 @@
   color: rgb(12, 98, 183);
   margin-right: 300px;
   margin-bottom: 40px;
+  font-family: "Lora", serif;
 }
 .gallery-big-img__space {
   margin-top: 332px;
@@ -416,6 +440,7 @@
   font-size: 40px;
   font-weight: 500;
   color: rgb(12, 98, 183);
+  font-family: "Lora", serif;
 }
 .who-small-text {
   font-size: 20px;
@@ -449,6 +474,7 @@
   font-weight: 500;
   color: rgb(12, 98, 183);
   margin-right: 300px;
+  font-family: "Lora", serif;
 }
 .customer-arrow {
   margin-left: 1100px;
@@ -494,6 +520,7 @@
   width: 50%;
   text-align: center;
   margin-left: 25%;
+  font-family: "Lora", serif;
 }
 .answers-box {
   margin-top: 50px;
@@ -532,19 +559,21 @@
 
 .news {
   margin-top: 70px;
-  background-color: rgba(61, 60, 60, 0.319);
+  background-color: rgba(181, 181, 181, 0.144);
   width: 100vw;
 }
 .news-big-text {
   font-size: 40px;
   font-weight: 500;
   color: rgb(12, 98, 183);
-  margin-right: 300px;
+  margin-right: 250px;
+  font-family: "Lora", serif;
 }
 .news-small-text {
   text-align: center;
   color: rgb(255, 105, 24);
   display: inline-block;
+  margin-top: 20px;
 }
 .news-event {
   margin-top: 70px;
@@ -587,7 +616,7 @@
 }
 
 .member {
-  background-color: #3C5C7A;
+  background-color: #3c5c7a;
   color: white;
   width: 100%;
   text-align: left;
@@ -656,4 +685,13 @@
 .footer-tittle {
   font-weight: bold;
   color: rgb(200, 200, 200);
-}/*# sourceMappingURL=index.css.map */
+}
+.footer-back-top {
+  width: 80px !important;
+  height: 80px !important;
+  margin-left: 1200px;
+  background-color: white;
+  font-size: 30px;
+  padding: 8px;
+  /* border-radius: 50%; */
+} /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.header {
+    width: 100%wh;
+    height: 75px;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // background-color: red;
+
+    &-brand {
+
+        &__logo {
+            width: 90px;
+            height: 50px;
+            margin-top: 15px;
+        }
+    }
+
+    &-list {
+        margin-top: 12px;
+        list-style: none;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        position: relative;
+
+        a {
+            color: black;
+            text-decoration: none !important;
+        }
+
+        &__item {
+            display: inline-block;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                z-index: 2;
+                content: " ";
+                background-color: black;
+                height: 2.5px;
+                width: 0px;
+                transition: 0.5s;
+                left: 50%;
+                bottom: -25px;
+
+            }
+
+            &:hover::before {
+                background-color: black;
+                height: 2.5px;
+                width: 100%;
+                left: 0;
+                transition: 0.5s;
+
+            }
+        }
+    }
+
+    &-auth {
+        position: absolute;
+        z-index: 2;
+        margin-left: 1050px;
+        margin-top: 80px;
+        width: 100px;
+        opacity: 0;
+
+        &__profile {
+            width: 100px;
+            height: 40px;
+            background-color: white;
+        }
+
+        &__log-out {
+            width: 100px;
+            height: 40px;
+            background-color: white;
+        }
+    }
+
+    &-user {
+        font-size: 35px;
+        padding-top: 10px;
+
+        &:hover .nav-auth {
+            opacity: 1;
+        }
+    }
+}
+
+// employment
+.employment {
+    border: 2px solid #60616235;
+    padding-top: 0px;
+    margin-top: 30px;
+    padding-left: 40px;
+    line-height: 30px;
+
+    &-icon {
+        margin-left: 700px;
+        color: #3C5C7A;
+    }
+
+    &-tittle {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: #460268;
+        font-size: 25px;
+        margin-left: 30px;
+    }
+
+    &-main {
+        background-color: #60616235;
+        padding-top: 30px;
+        margin-right: 40px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        padding-left: 30px;
+
+        &__tittle {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        &__text {
+
+            &-bold {
+                font: 18px;
+                font-weight: 700;
+            }
+
+            &__italic {
+                font-style: italic;
+            }
+
+        }
+
+        &__case {
+
+            &__tittle {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+
+            &__li {
+                margin-left: 50px;
+            }
+
+            &__step {
+                font-weight: 700;
+            }
+
+            &__step2 {
+                margin-left: 50px;
+            }
+        }
+
+        &__work {
+            font-weight: 700;
+            margin-right: 50px;
+        }
+
+        &__number {
+            font-weight: 700;
+            color: #460268;
+        }
+    }
+}
+
+
+
+// account
+.account {
+
+    &-tittle {
+        margin-top: 50px;
+        color: #460268;
+        font-size: 25px;
+    }
+
+    &-icon {
+        margin-left: 1050px;
+        color: #3C5C7A;
+    }
+
+    &-main {
+        background-color: #60616235;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 40px;
+
+        &__input {
+            width: 100%;
+            margin-top: 20px;
+
+        }
+
+        &__submit {
+            width: 130px;
+            height: 60px;
+            border-top-right-radius: 20px;
+        }
+    }
+
+    &-heading {
+        margin-top: 15px;
+
+    }
+
+    &-email {
+        margin-top: 64px;
+    }
+
+    &-job {
+        margin-top: 65px;
+        margin-bottom: 40px;
+    }
+
+    &-check {
+        display: flex;
+        margin-left: 700px;
+    }
+
+    &-comment {
+        height: 100px;
+        padding-top: 0;
+    }
+}
+
+
+// member
+.member {
+    background-color: #3C5C7A;
+    color: white;
+    width: 100%;
+    text-align: left;
+    padding-top: 70px;
+    margin-top: 70px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    &__small-texts {
+        font-size: 20px;
+        margin-right: 300px;
+
+        &::after {
+            content: " ";
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            margin-left: 190px;
+            margin-top: -25px;
+        }
+    }
+
+    &__small-text {
+        font-size: 20px;
+        margin-right: 300px;
+    }
+
+    &__big-text {
+        font-size: 40px;
+        font-weight: 500;
+
+        margin-right: 300px;
+    }
+
+    &-button {
+        margin-top: 40px;
+        background-color: rgb(255, 105, 24);
+        width: 45%;
+        height: 40px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+
+    &-image {
+        position: absolute;
+        z-index: 2;
+        height: 100%;
+    }
+}
+
+// footer 
+.footer {
+    padding-top: 70px;
+    background-color: #1e3c58;
+    color: white;
+    padding-bottom: 70px;
+    width: 100%;
+    display: flex;
+
+    &-brand {
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    &-text {
+        font-size: 15px;
+
+        &__brand {
+            width: 220px;
+        }
+    }
+
+    &-tittle {
+        font-weight: bold;
+        color: rgb(200, 200, 200);
+    }
+}
