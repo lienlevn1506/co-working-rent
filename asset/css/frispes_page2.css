@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100% wh;
+  height: 75px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-brand__logo {
+  width: 90px;
+  height: 50px;
+  margin-top: 15px;
+}
+.nav-list {
+  margin-top: 12px;
+  list-style: none;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  position: relative;
+}
+.nav-list a {
+  color: black;
+  text-decoration: none !important;
+}
+.nav-list__item {
+  display: inline-block;
+  position: relative;
+}
+.nav-list__item::before {
+  position: absolute;
+  z-index: 2;
+  content: " ";
+  background-color: black;
+  height: 2.5px;
+  width: 0px;
+  transition: 0.5s;
+  left: 50%;
+  bottom: -25px;
+}
+.nav-list__item:hover::before {
+  background-color: black;
+  height: 2.5px;
+  width: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+.nav-auth {
+  position: absolute;
+  z-index: 2;
+  margin-left: 1050px;
+  margin-top: 80px;
+  width: 100px;
+  opacity: 0;
+}
+.nav-auth__profile {
+  width: 100px;
+  height: 40px;
+  background-color: white;
+}
+.nav-auth__log-out {
+  width: 100px;
+  height: 40px;
+  background-color: white;
+}
+.nav-user {
+  font-size: 35px;
+  padding-top: 10px;
+}
+.nav-user:hover .nav-auth {
+  opacity: 1;
+}
+
+.employment {
+  border: 2px solid rgba(96, 97, 98, 0.2078431373);
+  padding-top: 0px;
+  margin-top: 30px;
+  padding-left: 40px;
+  line-height: 30px;
+}
+.employment-icon {
+  margin-left: 700px;
+  color: #3C5C7A;
+}
+.employment-tittle {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #460268;
+  font-size: 25px;
+  margin-left: 30px;
+}
+.employment-main {
+  background-color: rgba(96, 97, 98, 0.2078431373);
+  padding-top: 30px;
+  margin-right: 40px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+.employment-main__tittle {
+  font-size: 20px;
+  font-weight: 700;
+}
+.employment-main__text-bold {
+  font: 18px;
+  font-weight: 700;
+}
+.employment-main__text__italic {
+  font-style: italic;
+}
+.employment-main__case__tittle {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.employment-main__case__li {
+  margin-left: 50px;
+}
+.employment-main__case__step {
+  font-weight: 700;
+}
+.employment-main__case__step2 {
+  margin-left: 50px;
+}
+.employment-main__work {
+  font-weight: 700;
+  margin-right: 50px;
+}
+.employment-main__number {
+  font-weight: 700;
+  color: #460268;
+}
+
+.account-tittle {
+  margin-top: 50px;
+  color: #460268;
+  font-size: 25px;
+}
+.account-icon {
+  margin-left: 1050px;
+  color: #3C5C7A;
+}
+.account-main {
+  background-color: rgba(96, 97, 98, 0.2078431373);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 40px;
+}
+.account-main__input {
+  width: 100%;
+  margin-top: 20px;
+}
+.account-main__submit {
+  width: 130px;
+  height: 60px;
+  border-top-right-radius: 20px;
+}
+.account-heading {
+  margin-top: 15px;
+}
+.account-email {
+  margin-top: 64px;
+}
+.account-job {
+  margin-top: 65px;
+  margin-bottom: 40px;
+}
+.account-check {
+  display: flex;
+  margin-left: 700px;
+}
+.account-comment {
+  height: 100px;
+  padding-top: 0;
+}
+
+.member {
+  background-color: #3C5C7A;
+  color: white;
+  width: 100%;
+  text-align: left;
+  padding-top: 70px;
+  margin-top: 70px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.member__small-texts {
+  font-size: 20px;
+  margin-right: 300px;
+}
+.member__small-texts::after {
+  content: " ";
+  width: 100px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  margin-left: 190px;
+  margin-top: -25px;
+}
+.member__small-text {
+  font-size: 20px;
+  margin-right: 300px;
+}
+.member__big-text {
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 300px;
+}
+.member-button {
+  margin-top: 40px;
+  background-color: rgb(255, 105, 24);
+  width: 45%;
+  height: 40px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.member-image {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+}
+
+.footer {
+  padding-top: 70px;
+  background-color: #1e3c58;
+  color: white;
+  padding-bottom: 70px;
+  width: 100%;
+  display: flex;
+}
+.footer-brand {
+  font-size: 50px;
+  font-weight: bold;
+}
+.footer-text {
+  font-size: 15px;
+}
+.footer-text__brand {
+  width: 220px;
+}
+.footer-tittle {
+  font-weight: bold;
+  color: rgb(200, 200, 200);
+}/*# sourceMappingURL=frispes_page2.css.map */
